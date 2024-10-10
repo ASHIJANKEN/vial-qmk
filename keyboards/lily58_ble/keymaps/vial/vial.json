@@ -1,0 +1,371 @@
+{
+  "name": "Lily58",
+  "vendorId": "0x04D8",
+  "productId": "0xEB2D",
+  "lighting": "none",
+  "matrix": { "rows": 10, "cols": 6 },
+  "layouts": {
+    "labels": [],
+    "keymap": [
+      [{"x":3.5},"0,3",{"x":8.5},"5,3"],
+        [{"y":-0.875,"x":2.5},"0,2",{"x":1},"0,4",{"x":6.5},"5,4",{"x":1},"5,2"],
+        [{"y":-0.875,"x":5.5},"0,5",{"x":4.5},"5,5"],
+        [{"y":-0.875,"x":1.5},"0,1",{"x":12.5},"5,1"],
+        [{"y":-0.875,"x":0.5,"c":"#777777"},"0,0",{"x":14.5,"c":"#cccccc"},"5,0"],
+        [{"y":-0.5,"x":3.5},"1,3",{"x":8.5},"6,3"],
+        [{"y":-0.875,"x":2.5},"1,2",{"x":1},"1,4",{"x":6.5},"6,4",{"x":1},"6,2"],
+        [{"y":-0.875,"x":5.5},"1,5",{"x":4.5},"6,5"],
+        [{"y":-0.875,"x":1.5},"1,1",{"x":12.5},"6,1"],
+        [{"y":-0.875,"x":0.5,"c":"#aaaaaa"},"1,0",{"x":14.5,"c":"#cccccc"},"6,0"],
+        [{"y":-0.5,"x":3.5},"2,3",{"x":8.5},"7,3"],
+        [{"y":-0.875,"x":2.5},"2,2",{"x":1},"2,4",{"x":6.5},"7,4",{"x":1},"7,2"],
+        [{"y":-0.875,"x":5.5},"2,5",{"x":4.5},"7,5"],
+        [{"y":-0.875,"x":1.5},"2,1",{"x":12.5},"7,1"],
+        [{"y":-0.875,"x":0.5,"c":"#aaaaaa"},"2,0",{"x":14.5,"c":"#cccccc"},"7,0"],
+        [{"y":-0.75,"x":6.5},"4,5",{"x":2.5},"9,5"],
+        [{"y":-0.75,"x":3.5},"3,3",{"x":8.5},"8,3"],
+        [{"y":-0.875,"x":2.5},"3,2",{"x":1},"3,4",{"x":6.5},"8,4",{"x":1},"8,2"],
+        [{"y":-0.875,"x":5.5},"3,5",{"x":4.5},"8,5"],
+        [{"y":-0.875,"x":1.5},"3,1",{"x":12.5},"8,1"],
+        [{"y":-0.875,"x":0.5,"c":"#aaaaaa"},"3,0",{"x":14.5},"8,0"],
+        [{"y":-0.375,"x":3},"4,1"],
+        [{"y":-0.975,"x":4},"4,2",{"x":7.5},"9,2","9,1"],
+        [{"y":-0.9,"x":5},"4,3",{"x":0.5,"c":"#777777","h":1.5},"4,4",{"x":2.5,"h":1.5},"9,4",{"x":0.5,"c":"#aaaaaa"},"9,3"]
+    ]
+  },
+  "customKeycodes": [
+    {
+      "name": "SEL_BLE",
+      "title": "Output report from BLE",
+      "shortName": "SEL_BLE"
+    },
+    {
+      "name": "SEL_USB",
+      "title": "Output report from USB",
+      "shortName": "SEL_USB"
+    },
+    {
+      "name": "ADV0",
+      "title": "Start advertise to ID0",
+      "shortName": "ADV_ID0"
+    },
+    {
+      "name": "ADV1",
+      "title": "Start advertise to ID1",
+      "shortName": "ADV_ID1"
+    },
+    {
+      "name": "ADV2",
+      "title": "Start advertise to ID2",
+      "shortName": "ADV_ID2"
+    },
+    {
+      "name": "ADV3",
+      "title": "Start advertise to ID3",
+      "shortName": "ADV_ID3"
+    },
+    {
+      "name": "ADV4",
+      "title": "Start advertise to ID4",
+      "shortName": "ADV_ID4"
+    },
+    {
+      "name": "ADV5",
+      "title": "Start advertise to ID5",
+      "shortName": "ADV_ID5"
+    },
+    {
+      "name": "ADV6",
+      "title": "Start advertise to ID6",
+      "shortName": "ADV_ID6"
+    },
+    {
+      "name": "ADV7",
+      "title": "Start advertise to ID7",
+      "shortName": "ADV_ID7"
+    },
+    {
+      "name": "AD_WO_L",
+      "title": "Start advertise without whitelist (Pair new device)",
+      "shortName": "AD_WO_L"
+    },
+    {
+      "name": "DEL0",
+      "title": "Delete pairing info ID0",
+      "shortName": "DEL_ID0"
+    },
+    {
+      "name": "DEL1",
+      "title": "Delete pairing info ID1",
+      "shortName": "DEL_ID1"
+    },
+    {
+      "name": "DEL2",
+      "title": "Delete pairing info ID2",
+      "shortName": "DEL_ID2"
+    },
+    {
+      "name": "DEL3",
+      "title": "Delete pairing info ID3",
+      "shortName": "DEL_ID3"
+    },
+    {
+      "name": "DEL4",
+      "title": "Delete pairing info ID4",
+      "shortName": "DEL_ID4"
+    },
+    {
+      "name": "DEL5",
+      "title": "Delete pairing info ID5",
+      "shortName": "DEL_ID5"
+    },
+    {
+      "name": "DEL6",
+      "title": "Delete pairing info ID6",
+      "shortName": "DEL_ID6"
+    },
+    {
+      "name": "DEL7",
+      "title": "Delete pairing info ID7",
+      "shortName": "DEL_ID7"
+    },
+    {
+      "name": "DEL_ALL",
+      "title": "Delete all pairing info",
+      "shortName": "DEL_ALL"
+    },
+    {
+      "name": "BATT",
+      "title": "Print battery info",
+      "shortName": "BATT_LV"
+    },
+    {
+      "name": "QWERTY",
+      "title": "Change layer to QWERTY",
+      "shortName": "QWERTY"
+    },
+    {
+      "name": "QWERTY_WIN",
+      "title": "Change layer to QWERTY_WIN",
+      "shortName": "QWERTY_WIN"
+    },
+    {
+      "name": "UBUNTU",
+      "title": "Ubuntu mode",
+      "shortName": "UBUNTU"
+    },
+    {
+      "name": "MAC",
+      "title": "MAC mode",
+      "shortName": "MAC"
+    },
+    {
+      "name": "LOWER",
+      "title": "LOWER layer",
+      "shortName": "LOWER"
+    },
+    {
+      "name": "RAISE",
+      "title": "RAISE layer",
+      "shortName": "RAISE"
+    },
+    {
+      "name": "ADJUST",
+      "title": "ADJUST layer",
+      "shortName": "ADJUST"
+    },
+    {
+      "name": "BT_ID0",
+      "title": "BT_ID0",
+      "shortName": "BT_ID0"
+    },
+    {
+      "name": "BT_ID1",
+      "title": "BT_ID1",
+      "shortName": "BT_ID1"
+    },
+    {
+      "name": "BT_ID2",
+      "title": "BT_ID2",
+      "shortName": "BT_ID2"
+    },
+    {
+      "name": "BT_ID3",
+      "title": "BT_ID3",
+      "shortName": "BT_ID3"
+    },
+    {
+      "name": "BT_ID4",
+      "title": "BT_ID4",
+      "shortName": "BT_ID4"
+    },
+    {
+      "name": "BT_ID5",
+      "title": "BT_ID5",
+      "shortName": "BT_ID5"
+    },
+    {
+      "name": "BT_ID6",
+      "title": "BT_ID6",
+      "shortName": "BT_ID6"
+    },
+    {
+      "name": "BT_ID7",
+      "title": "BT_ID7",
+      "shortName": "BT_ID7"
+    },
+    {
+      "name": "INFO",
+      "title": "INFO key",
+      "shortName": "INFO"
+    },
+    {
+      "name": "MY_EISU",
+      "title": "Force EISU mode",
+      "shortName": "MY_EISU"
+    },
+    {
+      "name": "MY_KANA",
+      "title": "Force KANA mode",
+      "shortName": "MY_KANA"
+    }
+  ],
+  "menus": [
+    {
+      "label": "Connection",
+      "content": [
+        {
+          "label": "Connection based layer",
+          "content": [
+            {
+              "label": "Enable connection based layer",
+              "type": "toggle",
+              "content": [
+                "id_enable_connection_based_layer",
+                0,
+                255
+              ]
+            },
+            {
+              "showIf": "{id_enable_connection_based_layer} != 0",
+              "content": [
+                {
+                  "label": "Default layer for ID0",
+                  "type": "range",
+                  "options": [
+                    0,
+                    8
+                  ],
+                  "content": [
+                    "id_trackball_aml_layer[0]",
+                    0,
+                    254,
+                    0
+                  ]
+                },
+                {
+                  "label": "Default layer for ID1",
+                  "type": "range",
+                  "options": [
+                    0,
+                    8
+                  ],
+                  "content": [
+                    "id_trackball_aml_layer[1]",
+                    0,
+                    254,
+                    1
+                  ]
+                },
+                {
+                  "label": "Default layer for ID2",
+                  "type": "range",
+                  "options": [
+                    0,
+                    8
+                  ],
+                  "content": [
+                    "id_trackball_aml_layer[2]",
+                    0,
+                    254,
+                    2
+                  ]
+                },
+                {
+                  "label": "Default layer for ID3",
+                  "type": "range",
+                  "options": [
+                    0,
+                    8
+                  ],
+                  "content": [
+                    "id_trackball_aml_layer[3]",
+                    0,
+                    254,
+                    3
+                  ]
+                },
+                {
+                  "label": "Default layer for ID4",
+                  "type": "range",
+                  "options": [
+                    0,
+                    8
+                  ],
+                  "content": [
+                    "id_trackball_aml_layer[4]",
+                    0,
+                    254,
+                    4
+                  ]
+                },
+                {
+                  "label": "Default layer for ID5",
+                  "type": "range",
+                  "options": [
+                    0,
+                    8
+                  ],
+                  "content": [
+                    "id_trackball_aml_layer[5]",
+                    0,
+                    254,
+                    5
+                  ]
+                },
+                {
+                  "label": "Default layer for ID6",
+                  "type": "range",
+                  "options": [
+                    0,
+                    8
+                  ],
+                  "content": [
+                    "id_trackball_aml_layer[6]",
+                    0,
+                    254,
+                    6
+                  ]
+                },
+                {
+                  "label": "Default layer for ID7",
+                  "type": "range",
+                  "options": [
+                    0,
+                    8
+                  ],
+                  "content": [
+                    "id_trackball_aml_layer[7]",
+                    0,
+                    254,
+                    7
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
