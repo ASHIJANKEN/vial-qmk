@@ -17,6 +17,7 @@ extern uint8_t is_master;
 // #define OLED_TIMEOUT 0
 #define WINDOWS_MODE true
 #define MAC_MODE false
+#define KANA_MODIFIER 17296
 
 // void show_info_oled(void);
 
@@ -184,6 +185,9 @@ void tap_without_modifier(uint8_t mods, uint16_t keycode) {
 // Called when a key pressed/released.
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   mod_state = get_mods();
+  #ifdef CONSOLE_ENABLE
+    uprintf("[lilyble] pru:%d\n", keycode);
+  #endif // CONSOLE_ENABLE
   // bool continue_process = process_record_bmp(keycode, record);
   // if (continue_process == false) {
   //     return false;
@@ -270,13 +274,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         is_kana_internal = false;
       }
       return false;
-    case KC_LANGUAGE_1:
-      if (record->event.pressed) {
+    case KANA_MODIFIER:
+      if (record->event.pressed && record->tap.count > 0) {
         tap_without_modifier(mod_state, KC_LNG1);
         is_kana_user = true;
         is_kana_internal = true;
+        return false;
       }
-      return false;
+      return true;
     // case KC_A ... KC_Z:
     // case KC_SPACE:
     //   if (record->event.pressed) {
@@ -294,11 +299,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return true;
 }
-
-
-
-// const uint16_t PROGMEM keymaps[1][MATRIX_ROWS][MATRIX_COLS] = {{{
-//     KC_A, KC_B, KC_C, KC_D, KC_E, KC_F, KC_G, KC_H, KC_I, KC_J, KC_K, KC_L, KC_M, KC_N, KC_O, KC_P, KC_R, KC_S, KC_T
-// }}};
-
-// const uint16_t PROGMEM encoder_map[1][NUM_ENCODERS][NUM_DIRECTIONS] = {{{KC_MS_U, KC_MS_D}}};
