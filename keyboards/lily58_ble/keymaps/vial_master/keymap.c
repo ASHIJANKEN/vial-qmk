@@ -268,15 +268,24 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         is_kana_internal = true;
       }
       return false;
-      // case KC_LANGUAGE_2:
-    //   uprintf("[lb] lg2\n");
-    //   tap_code16(KC_K);
-    //   if (record->event.pressed) {
-    //     tap_without_modifier(mod_state, KC_LNG2);
-    //     is_kana_user = false;
-    //     is_kana_internal = false;
-    //   }
-    //   return false;
+    case LT(2,KC_LNG1):
+      uprintf("[lb] lg1\n");
+      if (record->event.pressed && record->tap.count) {
+        tap_without_modifier(mod_state, KC_LNG1);
+        is_kana_user = true;
+        is_kana_internal = true;
+        return false;
+      }
+      return true;
+    case LT(3,KC_LNG2):
+      uprintf("[lb] lg2\n");
+      if (record->event.pressed && record->tap.count) {
+        tap_without_modifier(mod_state, KC_LNG2);
+        is_kana_user = false;
+        is_kana_internal = false;
+        return false;
+      }
+      return true;
     // case KANA_MODIFIER:
     //   if (record->event.pressed && record->tap.count > 0) {
     //     tap_without_modifier(mod_state, KC_LNG1);
