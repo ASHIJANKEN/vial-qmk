@@ -29,26 +29,26 @@ extern uint8_t is_master;
 //   _ADJUST,
 // };
 
-// enum custom_keycodes {
-//   QWERTY = BMP_SAFE_RANGE,
-//   QWERTY_WIN,
-//   UBUNTU,
-//   MAC,
-//   LOWER,
-//   RAISE,
-//   ADJUST,
-//   BT_ID0,
-//   BT_ID1,
-//   BT_ID2,
-//   BT_ID3,
-//   BT_ID4,
-//   BT_ID5,
-//   BT_ID6,
-//   BT_ID7,
-//   INFO,
-//   MY_EISU,
-//   MY_KANA,
-// };
+enum custom_keycodes {
+  QWERTY = BMP_SAFE_RANGE,
+  QWERTY_WIN,
+  UBUNTU,
+  MAC,
+  LOWER,
+  RAISE,
+  ADJUST,
+  // BT_ID0,
+  // BT_ID1,
+  // BT_ID2,
+  // BT_ID3,
+  // BT_ID4,
+  // BT_ID5,
+  // BT_ID6,
+  // BT_ID7,
+  INFO,
+  MY_EISU,
+  MY_KANA,
+};
 
 // const key_string_map_t custom_keys_user = {
 //   .start_kc = QWERTY,
@@ -186,7 +186,7 @@ void tap_without_modifier(uint8_t mods, uint16_t keycode) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   mod_state = get_mods();
   #ifdef CONSOLE_ENABLE
-    uprintf("[lilyble] pru:%d\n", keycode);
+    uprintf("[lb] pru:%d\n", keycode);
   #endif // CONSOLE_ENABLE
   // bool continue_process = process_record_bmp(keycode, record);
   // if (continue_process == false) {
@@ -267,7 +267,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     //     show_info_oled();
     //   }
     //   return false;
+    case KC_Q:
+      uprintf("[lb] q2\n");
+      tap_code16(KC_W);
+      return false;
+    case MY_EISU:
+            if (record->event.pressed) {
+        tap_without_modifier(mod_state, KC_LNG2);
+        // is_kana_user = false;
+        // is_kana_internal = false;
+      }
+      return false;
     case KC_LANGUAGE_2:
+      uprintf("[lb] lg2\n");
+      tap_code16(KC_K);
       if (record->event.pressed) {
         tap_without_modifier(mod_state, KC_LNG2);
         is_kana_user = false;

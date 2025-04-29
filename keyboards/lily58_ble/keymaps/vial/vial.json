@@ -90,54 +90,74 @@
       "shortName": "AD_WO_L"
     },
     {
-      "name": "DEL0",
-      "title": "Delete pairing info ID0",
-      "shortName": "DEL_ID0"
+        "name": "DEL0",
+        "title": "Delete pairing info ID0",
+        "shortName": "DEL\nID0"
     },
     {
-      "name": "DEL1",
-      "title": "Delete pairing info ID1",
-      "shortName": "DEL_ID1"
+        "name": "DEL1",
+        "title": "Delete pairing info ID1",
+        "shortName": "DEL\nID1"
     },
     {
-      "name": "DEL2",
-      "title": "Delete pairing info ID2",
-      "shortName": "DEL_ID2"
+        "name": "DEL2",
+        "title": "Delete pairing info ID2",
+        "shortName": "DEL\nID2"
     },
     {
-      "name": "DEL3",
-      "title": "Delete pairing info ID3",
-      "shortName": "DEL_ID3"
+        "name": "DEL3",
+        "title": "Delete pairing info ID3",
+        "shortName": "DEL\nID3"
     },
     {
-      "name": "DEL4",
-      "title": "Delete pairing info ID4",
-      "shortName": "DEL_ID4"
+        "name": "DEL4",
+        "title": "Delete pairing info ID4",
+        "shortName": "DEL\nID4"
     },
     {
-      "name": "DEL5",
-      "title": "Delete pairing info ID5",
-      "shortName": "DEL_ID5"
+        "name": "DEL5",
+        "title": "Delete pairing info ID5",
+        "shortName": "DEL\nID5"
     },
     {
-      "name": "DEL6",
-      "title": "Delete pairing info ID6",
-      "shortName": "DEL_ID6"
+        "name": "DEL6",
+        "title": "Delete pairing info ID6",
+        "shortName": "DEL\nID6"
     },
     {
-      "name": "DEL7",
-      "title": "Delete pairing info ID7",
-      "shortName": "DEL_ID7"
+        "name": "DEL7",
+        "title": "Delete pairing info ID7",
+        "shortName": "DEL\nID7"
     },
     {
-      "name": "DEL_ALL",
-      "title": "Delete all pairing info",
-      "shortName": "DEL_ALL"
+        "name": "DEL_ALL",
+        "title": "Delete all pairing info",
+        "shortName": "DEL\nALL"
     },
     {
-      "name": "BATT",
-      "title": "Print battery info",
-      "shortName": "BATT_LV"
+        "name": "BATT",
+        "title": "Print battery info",
+        "shortName": "BATT\nLV"
+    },
+    {
+        "name": "ENT_SLP",
+        "title": "Enter deep sleep mode",
+        "shortName": "ENT\nSLP"
+    },
+    {
+        "name": "DISABLE_KEY_OS_OVERRIDE",
+        "title": "Disable key overrides for JP/US OS",
+        "shortName": "D\nOVR"
+    },
+    {
+        "name": "ENABLE_US_KEY_ON_JP_OS_OVERRIDE",
+        "title": "Enable US keyboard on JP OS override",
+        "shortName": "UJ\nOVR"
+    },
+    {
+        "name": "ENABLE_JP_KEY_ON_US_OS_OVERRIDE",
+        "title": "Enable JP keyboard on US OS override",
+        "shortName": "JU\nOVR"
     },
     {
       "name": "QWERTY",
@@ -173,46 +193,6 @@
       "name": "ADJUST",
       "title": "ADJUST layer",
       "shortName": "ADJUST"
-    },
-    {
-      "name": "BT_ID0",
-      "title": "BT_ID0",
-      "shortName": "BT_ID0"
-    },
-    {
-      "name": "BT_ID1",
-      "title": "BT_ID1",
-      "shortName": "BT_ID1"
-    },
-    {
-      "name": "BT_ID2",
-      "title": "BT_ID2",
-      "shortName": "BT_ID2"
-    },
-    {
-      "name": "BT_ID3",
-      "title": "BT_ID3",
-      "shortName": "BT_ID3"
-    },
-    {
-      "name": "BT_ID4",
-      "title": "BT_ID4",
-      "shortName": "BT_ID4"
-    },
-    {
-      "name": "BT_ID5",
-      "title": "BT_ID5",
-      "shortName": "BT_ID5"
-    },
-    {
-      "name": "BT_ID6",
-      "title": "BT_ID6",
-      "shortName": "BT_ID6"
-    },
-    {
-      "name": "BT_ID7",
-      "title": "BT_ID7",
-      "shortName": "BT_ID7"
     },
     {
       "name": "INFO",
