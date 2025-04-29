@@ -111,9 +111,6 @@ void keyboard_post_init_user(void) {
     &dquo_key_override,
     NULL
   };
-  // This is a temporal solution to set default layer to 0.
-  // since custom keycodes aren't recognized by Vial.
-  set_single_default_layer(_QWERTY_WIN);
   // reload_key_override();
 }
 
