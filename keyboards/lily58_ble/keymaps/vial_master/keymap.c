@@ -40,30 +40,6 @@ enum custom_keycodes {
   MY_KANA,
 };
 
-// const key_string_map_t custom_keys_user = {
-//   .start_kc = QWERTY,
-//   .end_kc = MY_KANA,
-//   .key_strings =
-//     "QWERTY\0"
-//     "QWERTY_WIN\0"
-//     "UBUNTU\0"
-//     "MAC\0"
-//     "LOWER\0"
-//     "RAISE\0"
-//     "ADJUST\0"
-//     "BT_ID0\0"
-//     "BT_ID1\0"
-//     "BT_ID2\0"
-//     "BT_ID3\0"
-//     "BT_ID4\0"
-//     "BT_ID5\0"
-//     "BT_ID6\0"
-//     "BT_ID7\0"
-//     "INFO\0"
-//     "MY_EISU\0"
-//     "MY_KANA\0"
-// };
-
 const key_override_t rprn_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_0, JP_RPRN);
 const key_override_t at_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_2, JP_AT);
 const key_override_t circ_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_6, JP_CIRC);
@@ -76,22 +52,6 @@ const key_override_t tild_key_override = ko_make_basic(MOD_MASK_SHIFT, JP_GRV, J
 const key_override_t pipe_key_override = ko_make_basic(MOD_MASK_SHIFT, JP_YEN, JP_PIPE);
 const key_override_t coln_key_override = ko_make_basic(MOD_MASK_SHIFT, JP_SCLN, JP_COLN);
 const key_override_t dquo_key_override = ko_make_basic(MOD_MASK_SHIFT, JP_QUOT, JP_DQUO);
-
-// const key_override_t **key_overrides = (const key_override_t *[]){
-//   &rprn_key_override,
-//   &at_key_override,
-//   &circ_key_override,
-//   &ampr_key_override,
-//   &astr_key_override,
-//   &lprn_key_override,
-//   &unds_key_override,
-//   &plus_key_override,
-//   &tild_key_override,
-//   &pipe_key_override,
-//   &coln_key_override,
-//   &dquo_key_override,
-//   NULL
-// };
 
 uint8_t mod_state = 0;
 bool os_mode = false;
@@ -177,10 +137,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   #ifdef CONSOLE_ENABLE
     uprintf("[lb] pru:%d\n", keycode);
   #endif // CONSOLE_ENABLE
-  // bool continue_process = process_record_bmp(keycode, record);
-  // if (continue_process == false) {
-  //     return false;
-  // }
 
   switch (keycode) {
     case QWERTY:
@@ -218,22 +174,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         is_kana_internal = false;
       }
       return true;
-//     case BT_ID0 ... BT_ID7:
-//       // The code is based on tmk_core/protocol/nrf/bmp.c
-//       if (record->event.pressed) {
-//         if (mod_state & MOD_MASK_SHIFT) {
-// #ifdef CONSOLE_ENABLE
-//           uprintf("[lilyble] Delete BT_ID:%d\n", keycode - BT_ID0);
-// #endif // CONSOLE_ENABLE
-//           BMPAPI->ble.delete_bond(keycode - BT_ID0);
-//         } else {
-// #ifdef CONSOLE_ENABLE
-//           uprintf("[lilyble] Advertise BT_ID:%d\n", keycode - BT_ID0);
-// #endif // CONSOLE_ENABLE
-//           BMPAPI->ble.advertise(keycode - BT_ID0);
-//         }
-//       }
-//       return false;
     // case INFO:
     //   if (record->event.pressed) {
     //     show_info_oled();
@@ -253,10 +193,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         // show_info_oled();
       }
       return false;
-    // case KC_Q:
-    //   uprintf("[lb] q2\n");
-    //   tap_code16(KC_W);
-    //   return false;
     case MY_EISU:
       if (record->event.pressed) {
         tap_without_modifier(mod_state, KC_LNG2);
@@ -272,7 +208,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
     case LT(2,KC_LNG1):
-      uprintf("[lb] lg1\n");
       if (record->event.pressed && record->tap.count) {
         tap_without_modifier(mod_state, KC_LNG1);
         is_kana_user = true;
@@ -281,7 +216,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return true;
     case LT(3,KC_LNG2):
-      uprintf("[lb] lg2\n");
       if (record->event.pressed && record->tap.count) {
         tap_without_modifier(mod_state, KC_LNG2);
         is_kana_user = false;
@@ -289,13 +223,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return false;
       }
       return true;
-    // case KANA_MODIFIER:
-    //   if (record->event.pressed && record->tap.count > 0) {
-    //     tap_without_modifier(mod_state, KC_LNG1);
-    //     is_kana_user = true;
-    //     is_kana_internal = true;
-    //   }
-    //   return true;
     case KC_A ... KC_Z:
     case KC_SPACE:
       if (record->event.pressed) {
