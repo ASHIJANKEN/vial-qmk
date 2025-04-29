@@ -25,5 +25,8 @@
 
 #define USE_SERIAL_PD2
 
-// #define TAPPING_FORCE_HOLD
+#define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 100
+
+// Define numbers of items in key_overrides
+#define VIAL_KEY_OVERRIDE_ENTRIES 13
