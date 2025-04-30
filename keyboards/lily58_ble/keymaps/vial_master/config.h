@@ -12,7 +12,7 @@
 /* Space reduction */
 
 // #define DYNAMIC_KEYMAP_LAYER_COUNT 6
-#define VIAL_TAP_DANCE_ENTRIES 4
+#define VIAL_TAP_DANCE_ENTRIES 10
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
 #define NO_ACTION_ONESHOT
@@ -31,4 +31,4 @@
 #define PERMISSIVE_HOLD
 
 // Define numbers of items in key_overrides
-#define VIAL_KEY_OVERRIDE_ENTRIES 13
+#define VIAL_KEY_OVERRIDE_ENTRIES 15

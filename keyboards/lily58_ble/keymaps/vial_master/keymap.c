@@ -11,6 +11,7 @@
 #include "bmp_custom_keycodes.h" // qmk_firmware_bmp_vial/tmk_core/protocol/bmp/bmp_custom_keycodes.h
 // #include "keycode_str_converter.h"
 #include "process_combo.h"
+#include "bmp.h"
 
 extern uint8_t is_master;
 
@@ -39,19 +40,6 @@ enum custom_keycodes {
   MY_EISU,
   MY_KANA,
 };
-
-const key_override_t rprn_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_0, JP_RPRN);
-const key_override_t at_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_2, JP_AT);
-const key_override_t circ_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_6, JP_CIRC);
-const key_override_t ampr_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_7, JP_AMPR);
-const key_override_t astr_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_8, JP_ASTR);
-const key_override_t lprn_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_9, JP_LPRN);
-const key_override_t unds_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_MINS, JP_UNDS);
-const key_override_t plus_key_override = ko_make_basic(MOD_MASK_SHIFT, JP_EQL, JP_PLUS);
-const key_override_t tild_key_override = ko_make_basic(MOD_MASK_SHIFT, JP_GRV, JP_TILD);
-const key_override_t pipe_key_override = ko_make_basic(MOD_MASK_SHIFT, JP_YEN, JP_PIPE);
-const key_override_t coln_key_override = ko_make_basic(MOD_MASK_SHIFT, JP_SCLN, JP_COLN);
-const key_override_t dquo_key_override = ko_make_basic(MOD_MASK_SHIFT, JP_QUOT, JP_DQUO);
 
 uint8_t mod_state = 0;
 bool os_mode = false;
@@ -96,21 +84,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
  */
 extern const key_override_t **key_overrides;
 void keyboard_post_init_user(void) {
-  key_overrides = (const key_override_t *[]){
-    &rprn_key_override,
-    &at_key_override,
-    &circ_key_override,
-    &ampr_key_override,
-    &astr_key_override,
-    &lprn_key_override,
-    &unds_key_override,
-    &plus_key_override,
-    &tild_key_override,
-    &pipe_key_override,
-    &coln_key_override,
-    &dquo_key_override,
-    NULL
-  };
   // reload_key_override();
 }
 
@@ -134,6 +107,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   #ifdef CONSOLE_ENABLE
     uprintf("[lb] pru:%d\n", keycode);
   #endif // CONSOLE_ENABLE
+  bool continue_process = process_record_bmp(keycode, record);
+  if (continue_process == false) {
+    return false;
+  }
 
   switch (keycode) {
     case QWERTY:
