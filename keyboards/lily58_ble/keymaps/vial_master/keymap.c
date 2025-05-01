@@ -123,7 +123,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case KC_1 ... KC_0:
     case JP_EXLM:
-    case JP_AT:
+    // case JP_AT:
     case JP_HASH:
     case JP_DLR:
     case JP_PERC:
@@ -132,7 +132,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case JP_ASTR:
     case JP_LPRN:
     case JP_RPRN:
-    case JP_LCBR:
+    // case JP_LCBR:
     case JP_RCBR:
     case JP_GRV:
     case JP_YEN:
