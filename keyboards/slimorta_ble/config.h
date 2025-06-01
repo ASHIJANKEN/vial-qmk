@@ -7,18 +7,18 @@
 #define MATRIX_ROWS_DEFAULT 10
 #define MATRIX_COLS_DEFAULT 6
 #define THIS_DEVICE_ROWS 5
-#define THIS_DEVICE_COLS
+#define THIS_DEVICE_COLS 12
 // #define IS_LEFT_HAND  true
 #define BMP_DEFAULT_MODE SINGLE
 #define ACTION_DEBUG
 /* key matrix size */
 
-// #define DIODE_DIRECTION COL2ROW
+#define DIODE_DIRECTION COL2ROW
 
-/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPORT_ENABLE
-/* Locking resynchronize hack */
-#define LOCKING_RESYNC_ENABLE
+// /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
+// #define LOCKING_SUPPORT_ENABLE
+// /* Locking resynchronize hack */
+// #define LOCKING_RESYNC_ENABLE
 
 // #define RGBLIGHT_SPLIT
 // #define RGBLED_NUM_DEFAULT 128
