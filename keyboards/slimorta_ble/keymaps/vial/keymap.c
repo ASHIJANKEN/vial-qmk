@@ -182,7 +182,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
     case LT(2,KC_LNG1):
-      if (record->event.pressed && record->tap.count) {
+      if (record->tap.count == 0) {
+        break;
+      }
+    case KC_LNG1:
+      if (record->event.pressed) {
         tap_without_modifier(mod_state, KC_LNG1);
         is_kana_user = true;
         is_kana_internal = true;
@@ -190,7 +194,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return true;
     case LT(3,KC_LNG2):
-      if (record->event.pressed && record->tap.count) {
+      if (record->tap.count == 0) {
+        break;
+      }
+    case KC_LNG2:
+      if (record->event.pressed) {
         tap_without_modifier(mod_state, KC_LNG2);
         is_kana_user = false;
         is_kana_internal = false;
